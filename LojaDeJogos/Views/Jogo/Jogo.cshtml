@@ -1,0 +1,77 @@
+﻿@model LojaDeJogos.Models.Jogo
+
+
+@{
+    ViewBag.Title = "Jogo";
+}
+
+<h2>Cadastro de jogos </h2>
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Dados do Jogo</legend>
+        <div class="editor-label">
+            Código
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.JogoCod)
+        </div>
+
+        <div class="editor-label">
+            Nome do jogo
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.JogoNome)
+        </div>
+
+        <div class="editor-label">
+            Versão do jogo
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.JogoVersao)
+
+        </div>
+
+        <div class="editor-label">
+            Desenvolvedor
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.JogoDesenv)
+
+        </div>
+
+        <div class="editor-label">
+            Gênero do jogo
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.JogoGen)
+
+        </div>
+
+        <div class=" editor-label">
+            Faixa etária
+        </div>
+        <div class=" editor-field">
+            @Html.EditorFor(model => model.JogoFaixaEt)
+        </div>
+
+        <div class="editor-label">
+            Plataforma do Jogo
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.JogoPlat)
+        </div>
+
+        <div class="editor-label">
+            Ano de lançamento
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.JogoAnoLanc)
+        </div>
+
+        <p><input type="submit" value="Cadastrar" /></p>
+    </fieldset>
+
+}
