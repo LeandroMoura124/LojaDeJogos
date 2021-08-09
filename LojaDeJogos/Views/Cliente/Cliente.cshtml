@@ -1,0 +1,64 @@
+﻿@model  LojaDeJogos.Models.Cliente
+
+
+@{
+    ViewBag.Title = "Cliente";
+}
+
+
+<h2>Cadastro de cliente </h2>
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Dados do Jogo</legend>
+        <div class="editor-label">
+            Nome
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.ClienteNome)
+        </div>
+
+        <div class="editor-label">
+            CPF
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.ClienteCPF)
+        </div>
+
+        <div class="editor-label">
+            Data de Nascimento
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.FuncDtNasc)
+
+        </div>
+
+        <div class="editor-label">
+            Email
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.ClienteEmail)
+
+        </div>
+
+        <div class="editor-label">
+            Número de Celular
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.ClienteCel)
+
+        </div>
+
+        <div class=" editor-label">
+            Endereço
+        </div>
+        <div class=" editor-field">
+            @Html.EditorFor(model => model.ClienteEnd)
+        </div>
+
+        <p><input type="submit" value="Cadastrar" /></p>
+    </fieldset>
+
+}
