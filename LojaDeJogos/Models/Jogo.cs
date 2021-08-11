@@ -10,7 +10,7 @@ namespace LojaDeJogos.Models
     public class Jogo : Controller
     {
         // GET: Jogo
-        [Range(1, 4, ErrorMessage = "O código deve ter de 1 a 10 dígitos")]
+        [Range(1, 10, ErrorMessage = "O código deve ter de 1 a 10 dígitos")]
         public ushort JogoCod { get; set; }
         [Required(ErrorMessage = "O nome é obrigatório")]
         public string JogoNome { get; set; }

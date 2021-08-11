@@ -18,27 +18,28 @@ namespace LojaDeJogos.Models
         public string ClienteCPF { get; set; }
 
         [DisplayFormat(DataFormatString = "{0:dd/MM/yyy}", ApplyFormatInEditMode = true)]
-        public DateTime FuncDtNasc
+        public DateTime ClieDtNasc
         {
             get
             {
-                return this.funcDtNasc.HasValue
-                    ? this.funcDtNasc.Value
+                return this.clieDtNasc.HasValue
+                    ? this.clieDtNasc.Value
                     : DateTime.Now;
             }
             set
             {
-                this.funcDtNasc = value;
+                this.clieDtNasc = value;
             }
         }
-        private DateTime? funcDtNasc = null;
+        private DateTime? clieDtNasc = null;
 
         [RegularExpression(@"\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*", ErrorMessage = "Email inválido.")]
+       
         public string ClienteEmail { get; set; }
 
         public string ClienteCel { get; set; }
 
-        [StringLength(100, MinimumLength = 10, ErrorMessage = "Informe seu endereço completo.")]
+        [StringLength(100, MinimumLength = 10, ErrorMessage = "Informe o endereço completo.")]
         public string ClienteEnd { get; set; }
     }
 }

@@ -10,13 +10,17 @@ namespace LojaDeJogos.Models
     public class Funcionario : Controller
     {
         // GET: Funcionario
-        [Range(1, 4, ErrorMessage = "O código deve ter de 1 a 4 dígitos")]
+        [Range(1, 10, ErrorMessage = "O código deve ter de 1 a 10 dígitos")]
         public ushort FuncCod { get; set; }
-        [Required(ErrorMessage = "O nome é obrigatório")]
+
+        [Required(ErrorMessage = "O nome do funcionário é obrigatório")]
         public string FuncNome { get; set; }
 
+        [StringLength(12, MinimumLength = 9, ErrorMessage = "CPF incompleto ou inválido.")]
         public string FuncCPF { get; set; }
 
+
+        [StringLength(12, MinimumLength = 7, ErrorMessage = "RG incompleto ou inválido.")]
         public string FuncRg { get; set; }
 
         public DateTime FuncDtNasc
@@ -34,12 +38,17 @@ namespace LojaDeJogos.Models
         }
         private DateTime? funcDtNasc = null;
 
+        [StringLength(100, MinimumLength = 10, ErrorMessage = "Informe o endereço completo.")]
         public string FuncEnd { get; set; }
 
         public string FuncCel { get; set; }
 
+
+        [RegularExpression(@"\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*", ErrorMessage = "Email inválido.")]
         public string FuncEmail { get; set; }
 
+
+        [StringLength(100, MinimumLength = 3, ErrorMessage = "Informe o cargo exercido.")]
         public string FuncCargo { get; set; }
 
     }
