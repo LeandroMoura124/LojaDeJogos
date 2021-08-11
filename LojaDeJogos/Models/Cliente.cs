@@ -10,6 +10,8 @@ namespace LojaDeJogos.Models
     public class Cliente : Controller
     {
         // GET: Cliente
+
+        [Required(ErrorMessage = "O nome é obrigatório")]
         public string ClienteNome { get; set; }
         public string ClienteCPF { get; set; }
 

@@ -10,15 +10,29 @@ namespace LojaDeJogos.Models
     public class Funcionario : Controller
     {
         // GET: Funcionario
+        [Range(1, 4, ErrorMessage = "O código deve ter de 1 a 4 dígitos")]
         public ushort FuncCod { get; set; }
-
+        [Required(ErrorMessage = "O nome é obrigatório")]
         public string FuncNome { get; set; }
 
         public string FuncCPF { get; set; }
 
         public string FuncRg { get; set; }
 
-        public DateTime FuncDtNasc { get; set; }
+        public DateTime FuncDtNasc
+        {
+            get
+            {
+                return this.funcDtNasc.HasValue
+                    ? this.funcDtNasc.Value
+                    : DateTime.Now;
+            }
+            set
+            {
+                this.funcDtNasc = value;
+            }
+        }
+        private DateTime? funcDtNasc = null;
 
         public string FuncEnd { get; set; }
 

@@ -17,6 +17,7 @@
         </div>
         <div class="editor-field">
             @Html.EditorFor(model => model.JogoCod)
+            @Html.ValidationMessageFor(model => model.JogoCod)
         </div>
 
         <div class="editor-label">
@@ -24,6 +25,7 @@
         </div>
         <div class="editor-field">
             @Html.EditorFor(model => model.JogoNome)
+            @Html.ValidationMessageFor(model => Model.JogoNome)
         </div>
 
         <div class="editor-label">
@@ -31,6 +33,7 @@
         </div>
         <div class="editor-field">
             @Html.EditorFor(model => model.JogoVersao)
+            @Html.ValidationMessageFor(model  => model.JogoVersao)
 
         </div>
 
@@ -39,6 +42,7 @@
         </div>
         <div class="editor-field">
             @Html.EditorFor(model => model.JogoDesenv)
+            @Html.ValidationMessageFor(model => model.JogoDesenv)
 
         </div>
 
@@ -47,6 +51,7 @@
         </div>
         <div class="editor-field">
             @Html.EditorFor(model => model.JogoGen)
+            @Html.ValidationMessageFor(model => model.JogoGen)
 
         </div>
 
@@ -55,6 +60,7 @@
         </div>
         <div class=" editor-field">
             @Html.EditorFor(model => model.JogoFaixaEt)
+            @Html.ValidationMessageFor(model => model.JogoFaixaEt)
         </div>
 
         <div class="editor-label">
@@ -62,6 +68,7 @@
         </div>
         <div class="editor-field">
             @Html.EditorFor(model => model.JogoPlat)
+            @Html.ValidationMessageFor(model => model.JogoPlat)
         </div>
 
         <div class="editor-label">
@@ -69,9 +76,11 @@
         </div>
         <div class="editor-field">
             @Html.EditorFor(model => model.JogoAnoLanc)
+            @Html.ValidationMessageFor(model => model.JogoAnoLanc)
         </div>
 
         <p><input type="submit" value="Cadastrar" /></p>
+
     </fieldset>
 
 }
