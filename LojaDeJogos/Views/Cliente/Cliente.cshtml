@@ -17,6 +17,7 @@
         </div>
         <div class="editor-field">
             @Html.EditorFor(model => model.ClienteNome)
+            @Html.ValidationMessageFor(model => model.ClienteNome)
         </div>
 
         <div class="editor-label">
@@ -24,6 +25,7 @@
         </div>
         <div class="editor-field">
             @Html.EditorFor(model => model.ClienteCPF)
+            @Html.ValidationMessageFor(model => model.ClienteCPF)
         </div>
 
         <div class="editor-label">
@@ -31,6 +33,7 @@
         </div>
         <div class="editor-field">
             @Html.EditorFor(model => model.FuncDtNasc)
+            @Html.ValidationMessageFor(model => model.FuncDtNasc)
 
         </div>
 
@@ -39,6 +42,7 @@
         </div>
         <div class="editor-field">
             @Html.EditorFor(model => model.ClienteEmail)
+            @Html.ValidationMessageFor(model => model.ClienteEmail)
 
         </div>
 
@@ -47,6 +51,7 @@
         </div>
         <div class="editor-field">
             @Html.EditorFor(model => model.ClienteCel)
+            @Html.ValidationMessageFor(model => model.ClienteCel)
 
         </div>
 
@@ -55,6 +60,7 @@
         </div>
         <div class=" editor-field">
             @Html.EditorFor(model => model.ClienteEnd)
+            @Html.ValidationMessageFor(model => model.ClienteEnd)
         </div>
 
         <p><input type="submit" value="Cadastrar" /></p>
