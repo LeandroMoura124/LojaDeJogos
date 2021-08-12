@@ -4,14 +4,28 @@
     ViewBag.Title = "Funcionario";
 }
 
-<h2>Funcionário</h2>
 
-<h3>Cadastro de Funcionário</h3>
+<head>
+    <style>
+        h2, legend {
+            color: #0094ff;
+        }
+        /*editor-field{
+            width: 700px;
+            height: 400px;
+        }*/
+
+    </style>
+</head>
+
+<br />
+<h2>Cadastro de Funcionários</h2>
 @using (Html.BeginForm())
 {
     @Html.ValidationSummary(true)
 
     <fieldset>
+        <legend>Dados do Funcionário</legend>
         <div class="editor-label">
             Código
         </div>
@@ -84,10 +98,10 @@
             @Html.ValidationMessageFor(m => m.FuncCargo)
         </div>
 
-
-        <div>
-            <br />  <input type="submit" value="Enviar" />
-        </div>
+        <br />
+      
+            <p><input type="submit" value="Cadastrar" /></p>
+        
 
     </fieldset>
 

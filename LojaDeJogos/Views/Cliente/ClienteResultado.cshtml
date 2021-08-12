@@ -5,6 +5,17 @@
     ViewBag.Title = "ClienteResultado";
 }
 
+<style>
+    h2, legend {
+        color: #0094ff;
+    }
+    /*editor-field{
+            width: 700px;
+            height: 400px;
+        }*/
+
+</style>
+<br />
 <h2>Cliente</h2>
 <fieldset>
     <legend>Cadastro Cliente</legend>
@@ -22,7 +33,7 @@
     <div class="editor-field">@Html.DisplayFor(m => m.ClienteEmail)</div> <br />
 
     <div class="editor-label">Número do Celular do Cliente:</div>
-    <div class="editor-field">@Html.DisplayFor(m => m.ClienteCel)</div> <br /> 
+    <div class="editor-field">@Html.DisplayFor(m => m.ClienteCel)</div> <br />
 
     <div class="editor-label">Endereço do Cliente:</div>
     <div class="editor-field">@Html.DisplayFor(m => m.ClienteEnd)</div>

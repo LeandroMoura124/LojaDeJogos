@@ -7,6 +7,26 @@
     <title>@ViewBag.Title - Meu Aplicativo ASP.NET</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+
+    <style>
+        body {
+            background: #d3ecfe;
+        }
+        .navbar{
+            background: #ffd800;
+            /*/rgb(33 163 248 / 0,75*/
+        }
+        .navbar, li {
+            color: #000000;
+        }
+        footer p {
+            color: #f2ef64;
+        }
+        input {
+            background: #ffd800;
+            color: #0094ff;
+        }
+    </style>
 </head>
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
@@ -21,13 +41,14 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Jogo", "Jogo", "Jogo")></li@Html.ActionLink("Início", >
-                    <li>@Html.ActionLink("Cliente", "Cliente", "Cliente")></li@Html.ActionLink("Início", >
-                    <li>@Html.ActionLink("Funcionario", "Funcionario", "Funcionario")></li@Html.ActionLink("Início", >
+                    <li>@Html.ActionLink("Jogo", "Jogo", "Jogo")</li@Html.ActionLink("Início"),>
+                    <li>@Html.ActionLink("Cliente", "Cliente", "Cliente")</li@Html.ActionLink("Início", >
+                    <li>@Html.ActionLink("Funcionario", "Funcionario", "Funcionario")</li@Html.ActionLink("Início", >
                 </ul>
             </div>
-        </div>
+        </div> 
     </div>
+
     <div class="container body-content">
         @RenderBody()
         <hr />

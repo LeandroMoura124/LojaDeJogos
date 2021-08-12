@@ -4,7 +4,17 @@
 @{
     ViewBag.Title = "JogoResultado";
 }
+<style>
+    h2, legend {
+        color: #0094ff;
+    }
+    /*editor-field{
+            width: 700px;
+            height: 400px;
+        }*/
 
+</style>
+<br />
 <h2>Jogos</h2>
 <fieldset>
     <legend>Lista de Jogos</legend>
@@ -31,7 +41,10 @@
     <div class="editor-field">@Html.DisplayFor(model => model.JogoPlat)</div> <br />
 
     <div class="editor-label">Ano de Lançamento do Jogo:</div>
-    <div class="editor-field">@Html.DisplayFor(model => model.JogoAnoLanc)</div> 
+    <div class="editor-field">@Html.DisplayFor(model => model.JogoAnoLanc)</div> <br />
+
+    <div class="editor-label">Sinopse do Jogo:</div>
+    <div class="editor-field">@Html.DisplayFor(model => model.JogoSinopse)</div>
 
     <br />
 

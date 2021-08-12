@@ -37,5 +37,7 @@ namespace LojaDeJogos.Models
         [Required(ErrorMessage = "Insira o ano de lançamento do jogo.")]
         public int JogoAnoLanc { get; set; }
 
+        public string JogoSinopse { get; set; }
+
     }
 }

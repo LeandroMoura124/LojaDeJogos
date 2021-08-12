@@ -5,7 +5,21 @@
     ViewBag.Title = "Jogo";
 }
 
-<h2>Cadastro de jogos </h2>
+<head>
+    <style>
+        h2, legend{
+            color:#0094ff;
+        }
+        /*editor-field{
+            width: 700px;
+            height: 400px;
+        }*/
+        
+    </style>
+</head>
+
+<br/>
+<h2>Cadastro de Jogos </h2>
 @using (Html.BeginForm())
 {
     @Html.ValidationSummary(true)
@@ -78,6 +92,14 @@
             @Html.EditorFor(model => model.JogoAnoLanc)
             @Html.ValidationMessageFor(model => model.JogoAnoLanc)
         </div>
+        <div class="editor-label">
+            Sinopse do Jogo
+        </div>
+        <div class="editor-field2">
+            @Html.EditorFor(model => model.JogoSinopse)
+            @Html.ValidationMessageFor(model => model.JogoSinopse)
+        </div>
+        <br />
 
         <p><input type="submit" value="Cadastrar" /></p>
 
