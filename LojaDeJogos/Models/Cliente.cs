@@ -14,9 +14,9 @@ namespace LojaDeJogos.Models
         [Required(ErrorMessage = "O nome do cliente é obrigatório!")]
         public string ClienteNome { get; set; }
 
-        [StringLength(12, MinimumLength = 9, ErrorMessage = "CPF incompleto ou inválido." )]
+        [StringLength(14, MinimumLength = 10, ErrorMessage = "CPF incompleto ou inválido." )]
         public string ClienteCPF { get; set; }
-
+        
         [DisplayFormat(DataFormatString = "{0:dd/MM/yyy}", ApplyFormatInEditMode = true)]
         public DateTime ClieDtNasc
         {
@@ -37,6 +37,8 @@ namespace LojaDeJogos.Models
        
         public string ClienteEmail { get; set; }
 
+
+        
         public string ClienteCel { get; set; }
 
         [StringLength(100, MinimumLength = 10, ErrorMessage = "Informe o endereço completo.")]

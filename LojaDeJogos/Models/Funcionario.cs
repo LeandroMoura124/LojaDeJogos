@@ -16,7 +16,7 @@ namespace LojaDeJogos.Models
         [Required(ErrorMessage = "O nome do funcionário é obrigatório")]
         public string FuncNome { get; set; }
 
-        [StringLength(12, MinimumLength = 9, ErrorMessage = "CPF incompleto ou inválido.")]
+        [StringLength(14, MinimumLength = 10, ErrorMessage = "CPF incompleto ou inválido.")]
         public string FuncCPF { get; set; }
 
 
@@ -48,7 +48,7 @@ namespace LojaDeJogos.Models
         public string FuncEmail { get; set; }
 
 
-        [StringLength(100, MinimumLength = 3, ErrorMessage = "Informe o cargo exercido.")]
+        [StringLength(100, MinimumLength = 3, ErrorMessage = "Informe o cargo a qual exerce.")]
         public string FuncCargo { get; set; }
 
     }
