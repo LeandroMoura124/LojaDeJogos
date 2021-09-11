@@ -20,7 +20,7 @@
 
 <br/>
 <h2>Cadastro de Jogos </h2>
-@using (Html.BeginForm())
+@using (Html.BeginForm("CadJogo", "Jogo", FormMethod.Post))
 {
     @Html.ValidationSummary(true)
 

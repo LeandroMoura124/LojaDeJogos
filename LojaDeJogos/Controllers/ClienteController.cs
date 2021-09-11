@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using LojaDeJogos.Models;
+using LojaDeJogos.Repositório;
+
 
 namespace LojaDeJogos.Controllers
 {
@@ -15,14 +17,20 @@ namespace LojaDeJogos.Controllers
             var cliente = new Cliente(); // aqui criamos o projeto
             return View(cliente); // Retornamos para a view dados
         }
+        Ações ac = new Ações();
+
         [HttpPost]
-        public ActionResult Cliente(Cliente cliente)
+        public ActionResult CadCliente(Cliente cliente)
         {
-            if (ModelState.IsValid) // Validamos o estado
-            {
-                return View("ClienteResultado", cliente);
-            }
+            ac.CadastrarClientes(cliente);
             return View(cliente);
+        }
+
+        public ActionResult ListarCliente()
+        {
+            var ExibirClie = new Ações();
+            var TodosClie = ExibirClie.ListarCliente();
+            return View(TodosClie);
         }
     }
 }

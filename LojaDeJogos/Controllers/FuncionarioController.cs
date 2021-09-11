@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using LojaDeJogos.Models;
+using LojaDeJogos.Repositório;
 
 namespace LojaDeJogos.Controllers
 {
@@ -15,14 +16,20 @@ namespace LojaDeJogos.Controllers
             var funcionario = new Funcionario();
             return View(funcionario);
         }
+        Ações ac = new Ações();
+
         [HttpPost]
-        public ActionResult Funcionario(Funcionario funcionario)
+        public ActionResult CadFuncionario(Funcionario funcionario)
         {
-            if (ModelState.IsValid)
-            {
-                return View("FuncionarioResultado", funcionario);
-            }
+            ac.CadastrarFuncionario(funcionario);
             return View(funcionario);
+        }
+
+        public ActionResult ListarFuncionario()
+        {
+            var ExibirFunc = new Ações();
+            var TodosFunc = ExibirFunc.ListarFuncionario();
+            return View(TodosFunc);
         }
     }
 }

@@ -20,7 +20,7 @@
 
 <br />
 <h2>Cadastro de Funcionários</h2>
-@using (Html.BeginForm())
+@using (Html.BeginForm("CadFuncionario", "Funcionario", FormMethod.Post))
 {
     @Html.ValidationSummary(true)
 
