@@ -2,6 +2,11 @@
 Projeto escolar Etec Professor Basilides de Godoy. Desenvolvimento de um aplicativo web C#, Asp.net e MVC. Cadastro de jogos funcionários e clientes
 
 -- Tabelas criadas no MySql(Banco De Dados)
+
+
+
+
+
 create database db_Loja
 default character set utf8 
 default collate utf8_general_ci; 
