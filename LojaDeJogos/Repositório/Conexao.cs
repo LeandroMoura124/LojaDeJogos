@@ -9,7 +9,7 @@ namespace LojaDeJogos.Repositório
     public class Conexão
     {
         // GET: Conexão
-        MySqlConnection cn = new MySqlConnection("Server=localhost;DataBase=db_Loja;user=root;pwd=jovemdapaz347");
+        MySqlConnection cn = new MySqlConnection("Server=localhost;DataBase=db_Loja;user=root;pwd=bancodedados123");
         public static string msg;
 
         public MySqlConnection ConectarBD()
